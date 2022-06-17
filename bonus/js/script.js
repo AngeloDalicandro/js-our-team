@@ -92,7 +92,7 @@ addBtn.addEventListener('click',
         teamMembers.push(newMember);
 
         // Seleziono l'oggetto
-        thisMember = teamMembers[teamMembers.length - 1]
+        const thisMember = teamMembers[teamMembers.length - 1];
         
         // Stampo nel DOM la card
         teamContainer.innerHTML +=  `
