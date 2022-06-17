@@ -10,38 +10,62 @@
 
 // Creo un array dove inserisco gli oggetti
 const teamMembers = [
+    // Popolo l'array creando gli oggetti inserendo le informazioni di ogni membro del team con 3 chiavi
     {
         fullName: 'Wayne Barnett',
         role: 'Founder & CEO',
         img: 'img/wayne-barnett-founder-ceo.jpg',
-    };
+    },
     {
         fullName: 'Angela Caroll',
         role: 'Chief Editor',
         img: 'img/angela-caroll-chief-editor.jpg'
-    };
+    },
     {
         fullName: 'Walter Gordon',
         role: 'Office Manager',
-        img: 'img/walet-gordon-office-manager.jpg'
-    };
+        img: 'img/walter-gordon-office-manager.jpg'
+    },
     {
         fullName: 'Angela Lopez',
         role: 'Social Media Manager',
         img: 'img/angela-lopez-social-media-manager.jpg'
-    };
+    },
     {
         fullName: 'Scott Estrada',
         role: 'Developer',
         img: 'img/scott-estrada-developer.jpg'
-    };
+    },
     {
         fullName: 'Barbara Ramos',
         role: 'Graphic Designer',
         img: 'img/barbara-ramos-graphic-designer.jpg'
-    };
+    }
 ]
 
-// Popolo l'array creando gli oggetti inserendo le informazioni di ogni membro del team con 3 chiavi
-
 // Imposto un ciclo for per stampare nel DOM gli oggetti
+for(i = 0; i < teamMembers.length; i++) {
+    const thisMember = teamMembers[i];
+    const teamContainer = document.querySelector('.team-container');
+    console.log(teamContainer)
+    teamContainer.innerHTML +=   `
+                                <div class="team-card">
+                                    <div class="card-image">
+                                        <img
+                                            src="${thisMember.img}"
+                                            alt="${thisMember.fullName}"
+                                        />
+                                    </div>
+                                    <div class="card-text">
+                                        <h3>${thisMember.fullName}</h3>
+                                        <p>${thisMember.role}</p>
+                                    </div>
+                                </div>
+                                `;
+}
+
+
+
+
+
+
